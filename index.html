@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNampei Advocacy Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#topic">Topic</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#petition">Petition</a></li>
+        </ul>
+        <button id="reduceMotionButton">Reduce Motion</button>
+    </div>
+
+    <!-- Section: Topic -->
+    <h1 id="topic" class="navy fade-section">My Activism Project: Computer Science People Community</h1>
+    <h3 class="fade-section" style="font-style:italic;">Short Description:</h3>
+    <p class="fade-section">
+        I hope to provide a collaborative platform for people in CS to share resources, have discussions, and help each other!
+    </p>
+    <img class="fade-section" src="downloads/cp_2_1.png" alt="Community Project Image" />
+    <button id="contactAuthorButton" class="header-button fade-section" type="button">Contact Author for Collaboration</button>
+    <button id="suggestionBoxButton" class="header-button fade-section" type="button">Suggestion Box</button>
+
+<!-- Modal: Contact Author -->
+<div id="contactAuthorModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closeContactAuthorModal">&times;</span>
+        <h2>Contact Author</h2>
+        <p>Please provide your details, and the author will reach out to you.</p>
+        <form id="contactForm">
+            <label for="contactName">Name:</label>
+            <input type="text" id="contactName" name="name" required><br><br>
+            <label for="contactEmail">Email:</label>
+            <input type="email" id="contactEmail" name="email" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal: Suggestion Box -->
+<div id="suggestionBoxModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closeSuggestionBoxModal">&times;</span>
+        <h2>Suggestion Box</h2>
+        <p>Have any suggestions? Please share them with us below.</p>
+        <form id="suggestionForm">
+            <textarea id="suggestionText" rows="5" placeholder="Your suggestion..." required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Section: Petition -->
+    <section id="petition" class="fade-section">
+        <h2>Sign the Petition</h2>
+        <form id="petitionForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="submit" id="openModal">Sign Now</button>
+        </form>
+        <ul id="signatureList"></ul>
+        <p>Total Signatures: <span id="signatureCount">0</span></p>
+    </section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <!-- Close Button -->
+        <span id="closeModal" class="close-button">&times;</span>
+        <h2>Thank you so much for signing！</h2>
+        <img id="animatedImage" src="downloads/signup.gif" alt="Animated Image">
+    </div>
+</div>
+
+    <!-- Section: Resources -->
+    <section id="resources" class="fade-section">
+        <h2>Resources</h2>
+        <h3 class="header-container">Begin with CS</h3>
+        <p>
+            Please watch the video below:
+            <div style="text-align: center;" id="Midia">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tpIctyqH29Q?si=dcAGBeasJHHTcLvD" 
+                        title="YouTube video player" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+        </p>
+    </section>
+
+    <!-- Section: Recent News -->
+    <section class="fade-section">
+        <h2>Recent News</h2>
+        <a href="https://spectrum.ieee.org/nobel-prize-in-physics">
+            <article>
+                <h3>Why the Nobel Prize in Physics Went to AI Research</h3>
+                <p>Nobel committee recognizes scientists for foundational research in neural networks</p>
+            </article>
+            <img src="downloads/a-line-drawing-with-portraits-of-two-men.webp" width="300" alt="AI Research Image">
+        </a>
+    </section>
+
+    <!-- Section: Light/Dark Mode Toggle -->
+    <button id="toggleButton">Switch to Dark Mode</button>
+</body>
+</html>
